@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:1.31.2
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - ADVERTISE_IP=${APP_PROTOCOL:-http}://${APP_DOMAIN}/
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/transcode:/transcode
+      - ${ROOT_FOLDER_HOST}/media/data:/media
+    restart: unless-stopped
+    labels:
+      traefik.enable: ${APP_EXPOSED}
+      traefik.http.routers.plex.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.plex.entrypoints: websecure
+      traefik.http.routers.plex.service: plex
+      traefik.http.routers.plex.tls.certresolver: myresolver
+      traefik.http.services.plex.loadbalancer.server.port: 32400

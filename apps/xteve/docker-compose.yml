@@ -5,9 +5,9 @@ services:
     image: dnsforge/xteve:latest # Try to avoid "latest" tag. As it may break configs in the future.
     environment:
       - TZ=${TZ} # Can use any env variable. List in runtipi/templates/env-sample
+      - XTEVE_PORT=${APP_PORT}
     volumes:
       - ${APP_DATA_DIR}/data/xteve:/home/xteve/conf # Always start the path with ${APP_DATA_DIR}. This will put all data inside app-data/my-app/data
-      - XTEVE_PORT=8173
     ports:
       - ${APP_PORT}:8173
     restart: unless-stopped

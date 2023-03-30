@@ -5,9 +5,7 @@ This is the unofficial repository for the Tipi App Store. It contains all the ap
 ## Apps available
 
 - [Filebrowser](https://github.com/filebrowser/filebrowser) - Web File Browser
-- [Firefly III](https://github.com/firefly-iii/firefly-iii) - A personal finances manager
 - [Flaresolverr](https://github.com/FlareSolverr/FlareSolverr) - Proxy server to bypass Cloudflare protection
-- [Homarr](https://github.com/ajnart/homarr) - A homepage for your server
 - [Home Assistant](https://github.com/home-assistant/core) - Open source home automation that puts local control and privacy first
 - [Jackett](https://github.com/Jackett/Jackett) - API Support for your favorite torrent trackers
 - [n8n](https://github.com/n8n-io/n8n) - Workflow Automation Tool

@@ -1,0 +1,17 @@
+{
+    "$schema": "../schema.json",
+    "name": "Xteve",
+    "available": true,
+    "exposable": true,
+    "port": 8173,
+    "id": "xteve",
+    "tipi_version": 4,
+    "version": "latest",
+    "categories": ["media", "utilities"],
+    "description": "xTeVe is a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.",
+    "short_desc": "M3U Proxy for Plex DVR and Emby Live TV",
+    "author": "xteve-project",
+    "source": "https://github.com/xteve-project/xTeVe",
+    "form_fields": []
+  }
+  

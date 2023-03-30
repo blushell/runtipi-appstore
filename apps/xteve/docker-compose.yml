@@ -14,4 +14,4 @@ services:
     networks:
       - tipi_main_network
     labels:
-      traefik.http.routers.xteve.rule: Host(`${APP_DOMAIN}`) && Path(`/web`)      
+      traefik.http.routers.xteve.rule: (Host(`${APP_DOMAIN}`) && Path(`/web`))      

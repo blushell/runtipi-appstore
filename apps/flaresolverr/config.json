@@ -1,6 +1,7 @@
 {
   "name": "Flaresolverr",
   "available": true,
+  "exposable": false,
   "port": 8278,
   "id": "flaresolverr",
   "description": "FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection.",

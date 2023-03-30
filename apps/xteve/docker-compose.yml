@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.3"
 services:
   xteve: # Should be exact same name as "id" field in config.json
     container_name: xteve  # Should be exact same name as "id" field in config.json

@@ -12,7 +12,4 @@ services:
       - ${APP_PORT}:8173
     restart: unless-stopped
     networks:
-      - tipi_main_network
-    labels:
-      traefik.enable: ${APP_EXPOSED}
-      traefik.http.routers.sonarr.rule: Host(`${APP_DOMAIN}`) && Path(`/web`)   
+      - tipi_main_network 

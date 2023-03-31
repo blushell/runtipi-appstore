@@ -4,14 +4,14 @@ services:
     image: mdhiggins/sonarr-sma:latest
     container_name: sonarr-sma
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=${PUID}
+      - PGID=${PGID}
       - TZ=${TZ}
     dns:
       - ${DNS_IP}
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ${APP_DATA_DIR}/data:/config
+      - ${APP_DATA_DIR}/data/sonarr:/config
       - ${APP_DATA_DIR}/data/sma:/usr/local/sma/config    
       - ${ROOT_FOLDER_HOST}/media:/media
     ports:

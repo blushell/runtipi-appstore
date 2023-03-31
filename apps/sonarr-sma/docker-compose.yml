@@ -15,7 +15,7 @@ services:
       - ${APP_DATA_DIR}/data/sma:/usr/local/sma/config    
       - ${ROOT_FOLDER_HOST}/media:/media
     ports:
-      - ${APP_PORT}:8989
+      - ${APP_PORT}:8001
     restart: unless-stopped
     networks:
       - tipi_main_network
@@ -25,4 +25,4 @@ services:
       traefik.http.routers.sonarr.entrypoints: websecure
       traefik.http.routers.sonarr.service: sonarr-sma
       traefik.http.routers.sonarr.tls.certresolver: myresolver
-      traefik.http.services.sonarr.loadbalancer.server.port: 8989
+      traefik.http.services.sonarr.loadbalancer.server.port: 8001

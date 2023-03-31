@@ -16,3 +16,4 @@ This is the unofficial repository for the Tipi App Store. It contains all the ap
 - [Radarr](https://github.com/Radarr/Radarr) - Movie collection manager for Usenet and BitTorrent users
 - [Sonarr](https://github.com/Sonarr/Sonarr) - TV show manager for Usenet and BitTorrent
 - [Your Spotify](https://github.com/Yooooomi/your_spotify) - Self hosted Spotify tracking dashboard
+- [xTeve](https://github.com/xteve-project/xTeVe) - M3U Proxy for Plex DVR and Emby Live TV

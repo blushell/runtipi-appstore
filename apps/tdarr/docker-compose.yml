@@ -22,6 +22,7 @@ services:
       - ${APP_DATA_DIR}/data/tdarr/configs:/app/configs
       - ${APP_DATA_DIR}/data/tdarr/logs:/app/logs
       - ${ROOT_FOLDER_HOST}/media:/media
+      - /mnt/Storage:/Storage
       - ${APP_DATA_DIR}/data/transcode_cache:/temp
     ports:
       - ${APP_PORT}:8265 # webUI port

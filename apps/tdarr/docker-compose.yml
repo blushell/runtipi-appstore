@@ -10,7 +10,7 @@ services:
       - UMASK_SET=002
       - serverIP=0.0.0.0
       - serverPort=8266
-      - webUIPort=8265
+      - webUIPort=${APP_PORT}
       - internalNode=true
       - nodeName=MyInternalNode
       - nodeIP=0.0.0.0
@@ -31,13 +31,6 @@ services:
     network_mode: bridge
     networks:
       - tipi_main_network
-    labels:
-      traefik.enable: ${APP_EXPOSED}
-      traefik.http.routers.radarr.rule: Host(`${APP_DOMAIN}`)
-      traefik.http.routers.radarr.entrypoints: websecure
-      traefik.http.routers.radarr.service: tdarr
-      traefik.http.routers.radarr.tls.certresolver: myresolver
-      traefik.http.services.radarr.loadbalancer.server.port: 8265
     deploy:
       resources:
         reservations:

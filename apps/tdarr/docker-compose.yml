@@ -1,0 +1,39 @@
+version: "3.4"
+services:
+  tdarr:
+    image: ghcr.io/haveagitgat/tdarr:latest  
+    container_name: tdarr
+    environment:
+      - TZ=${TZ}
+      - PUID=1000
+      - PGID=1000
+      - UMASK_SET=002
+      - serverIP=0.0.0.0
+      - serverPort=8266
+      - webUIPort=8265
+      - internalNode=true
+      - nodeName=MyInternalNode
+      - nodeIP=0.0.0.0
+      - nodePort=8267
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ${APP_DATA_DIR}/data/tdarr/server:/app/server
+      - ${APP_DATA_DIR}/data/tdarr/configs:/app/configs
+      - ${APP_DATA_DIR}/data/tdarr/logs:/app/logs
+      - ${ROOT_FOLDER_HOST}/media:/media
+      - ${APP_DATA_DIR}/data/transcode_cache:/temp
+    ports:
+      - ${APP_PORT}:8265 # webUI port
+      - 8266:8266 # server port
+      - 8267:8267 # Internal node port
+    restart: unless-stopped
+    networks:
+      - tipi_main_network   
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+              - gpu
+

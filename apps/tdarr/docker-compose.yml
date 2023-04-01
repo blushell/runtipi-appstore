@@ -37,7 +37,7 @@ services:
       traefik.http.routers.radarr.entrypoints: websecure
       traefik.http.routers.radarr.service: tdarr
       traefik.http.routers.radarr.tls.certresolver: myresolver
-      traefik.http.services.radarr.loadbalancer.server.port: 8266 
+      traefik.http.services.radarr.loadbalancer.server.port: 8265
     deploy:
       resources:
         reservations:

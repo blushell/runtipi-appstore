@@ -2,7 +2,7 @@
     "$schema": "../schema.json",
     "name": "Tdarr",
     "available": true,
-    "exposable": false,
+    "exposable": true,
     "port": 8265,
     "id": "tdarr",
     "tipi_version": 4,

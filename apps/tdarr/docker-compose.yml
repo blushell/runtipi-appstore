@@ -28,6 +28,7 @@ services:
       - 8266:8266 # server port
       - 8267:8267 # Internal node port
     restart: unless-stopped
+    network_mode: bridge
     networks:
       - tipi_main_network   
     deploy:

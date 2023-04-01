@@ -3,7 +3,7 @@
     "name": "Tdarr",
     "available": true,
     "exposable": false,
-    "port": 8265,
+    "port": 8266,
     "id": "tdarr",
     "tipi_version": 4,
     "version": "latest",
